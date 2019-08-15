@@ -9,7 +9,7 @@ class Git
   def menu
     puts "-- MAIN MENU --".colorize(:cyan)
     puts "\n1) Enter git command".colorize(:cyan)
-    puts "2) Exit".colorize(:cyan)
+    puts "2) Exit".colorize(:magenta)
     print "> "
     choice = gets.to_i
     case choice
