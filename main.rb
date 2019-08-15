@@ -1,3 +1,5 @@
+require "colorize"
+require "pry"
 
 class Git
   def initialize
@@ -5,20 +7,21 @@ class Git
   end
 
   def menu
-    puts "\n1) Enter git command"
-    puts "2) Exit"
+    puts "-- MAIN MENU --".colorize(:cyan)
+    puts "\n1) Enter git command".colorize(:cyan)
+    puts "2) Exit".colorize(:cyan)
     print "> "
     choice = gets.to_i
     case choice
     when 1
-      puts "\nEnter git command:"
+      puts "\nEnter git command:".colorize(:green)
       print "> "
       puts_git(gets.strip)
       menu
     when 2
       exit
     else
-      puts "\nInvalid Input"
+      puts "\nInvalid Input".colorize(:red)
       sleep(2)
       print `clear`
       menu
